@@ -30,16 +30,16 @@
 .icon-Odyssey_Arrow---Up:before {
   content: "\e901";
 }
-.icon-Odyssey_Arrow-Long-Down:before {
+.icon-Odyssey_Arrow-Down:before {
   content: "\e902";
 }
-.icon-Odyssey_Arrow-Long-Left:before {
+.icon-Odyssey_Arrow-Left:before {
   content: "\e903";
 }
-.icon-Odyssey_Arrow-Long-Right:before {
+.icon-Odyssey_Arrow-Right:before {
   content: "\e92e";
 }
-.icon-Odyssey_Arrow-Long-Up:before {
+.icon-Odyssey_Arrow-Up:before {
   content: "\e92f";
 }
 .icon-Odyssey_More:before {
@@ -81,7 +81,7 @@
 .icon-Odyssey_Camera:before {
   content: "\e905";
 }
-.icon-Odyssey_Checkmark:before {
+.icon-Odyssey_Checked:before {
   content: "\e906";
 }
 .icon-Odyssey_Chevron-Down:before {
