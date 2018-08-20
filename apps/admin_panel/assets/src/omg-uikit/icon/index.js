@@ -28,7 +28,7 @@ export default class Icon extends Component {
   render () {
     return (
       <IconComponent
-        className={`icon-omisego_${this.props.name}`}
+        className={`icon-Odyssey_${this.props.name}`}
         hoverable={this.props.hoverable}
         button={this.props.button}
         onClick={this.props.onClick}
