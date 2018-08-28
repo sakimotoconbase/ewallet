@@ -64,10 +64,11 @@ const StyledRadioButton = styled(RadioButton)`
 `
 const InputLabelContainer = styled.div`
   display: inline-block;
-  width: calc(33.33% - 60px);
-  margin: 20px 20px 0 20px;
+  width: 33.33%;
+  padding: 20px 20px 0 20px;
   text-align: left;
   position: relative;
+  vertical-align: top;
 `
 const ButtonContainer = styled.div`
   text-align: center;
@@ -185,32 +186,6 @@ class CreateTransactionRequest extends Component {
             />
           </InputLabelContainer>
           <InputLabelContainer>
-            <InputLabel>Require Confirmation</InputLabel>
-            <StyledRadioButton
-              onClick={this.onRadioChange('requireConfirmation')(false)}
-              label='No'
-              checked={!this.state.requireConfirmation}
-            />
-            <StyledRadioButton
-              onClick={this.onRadioChange('requireConfirmation')(true)}
-              label='Yes'
-              checked={this.state.requireConfirmation}
-            />
-          </InputLabelContainer>
-          <InputLabelContainer>
-            <InputLabel>Allow Amount Overide</InputLabel>
-            <StyledRadioButton
-              onClick={this.onRadioChange('allowAmountOverride')(false)}
-              label='No'
-              checked={!this.state.allowAmountOverride}
-            />
-            <StyledRadioButton
-              onClick={this.onRadioChange('allowAmountOverride')(true)}
-              label='Yes'
-              checked={this.state.allowAmountOverride}
-            />
-          </InputLabelContainer>
-          <InputLabelContainer>
             <InputLabel>Token</InputLabel>
             <TokensFetcher
               query={{ page: 1, perPage: 10, search: this.state.searchTokenValue }}
@@ -244,6 +219,35 @@ class CreateTransactionRequest extends Component {
               onChange={this.onChange('amount')}
             />
           </InputLabelContainer>
+          <div>Advanced setting (Optional)</div>
+          <div>
+            <InputLabelContainer>
+              <InputLabel>Require Confirmation</InputLabel>
+              <StyledRadioButton
+                onClick={this.onRadioChange('requireConfirmation')(false)}
+                label='No'
+                checked={!this.state.requireConfirmation}
+              />
+              <StyledRadioButton
+                onClick={this.onRadioChange('requireConfirmation')(true)}
+                label='Yes'
+                checked={this.state.requireConfirmation}
+              />
+            </InputLabelContainer>
+            <InputLabelContainer>
+              <InputLabel>Allow Amount Overide</InputLabel>
+              <StyledRadioButton
+                onClick={this.onRadioChange('allowAmountOverride')(false)}
+                label='No'
+                checked={!this.state.allowAmountOverride}
+              />
+              <StyledRadioButton
+                onClick={this.onRadioChange('allowAmountOverride')(true)}
+                label='Yes'
+                checked={this.state.allowAmountOverride}
+              />
+            </InputLabelContainer>
+          </div>
           <InputLabelContainer>
             <InputLabel>
               Wallet Address <span>( Optional )</span>
